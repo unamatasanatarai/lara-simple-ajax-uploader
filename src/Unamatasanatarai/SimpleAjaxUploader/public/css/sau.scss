@@ -1,23 +1,50 @@
-.sau-upload{
-	.sau-progress{
-		position:relative;
-		height:1px;
-		width:100%;
-		display: flex;
-	    font-size: 1rem;
-	    background-color: #eceeef;
-	    border-radius: 0;
-	    overflow:hidden;
-	    display:none;
+.sau-upload {
+  position: relative;
+  .sau-progress {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #eceeef;
+    border-radius: 0;
+    overflow: hidden;
+    display: none;
 
-	    >div{
-	    	width:0;
-	    	height:100%;
-	    	background-color: #2cc185;
-	    }
+    > div {
+      width: 0;
+      height: 100%;
+      background-color: #2cc185;
+      transition: all 0.3s ease-out;
+    }
 
-	    &.open{
-	    	display:block;
-	    }
-	}
+    &.open {
+      display: flex;
+    }
+  }
+
+  .sau-inputs {
+    position: relative;
+  }
+
+  .sau-calltoaction {
+    width: 50%;
+    margin: 0 auto;
+    transition: all 0.3s ease-out;
+  }
+
+  .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+
+  .sau-image {
+    background: #efefef;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
 }

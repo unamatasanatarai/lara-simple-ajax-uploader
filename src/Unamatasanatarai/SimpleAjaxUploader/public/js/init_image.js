@@ -1,7 +1,7 @@
 ///
 /// SingleFileUploader for Images
 ///
-$('.sau-upload-single-image').each(function () {
+$('.sau-upload-image').each(function () {
     var progress = $(this).find('.sau-progress>div');
 
     var uploader = new ss.SimpleUpload({
@@ -19,7 +19,7 @@ $('.sau-upload-single-image').each(function () {
             $(this._opts.context).find('.sau-progress').removeClass('open');
         },
         onComplete: function (filename, response) {
-            $(this._opts.context).find('.sau-image').html('<img src="' + response.fileUrl + '">');
+            $(this._opts.context).find('.sau-image').html('<img src="' + response.fileFullUrl + '">');
             $(this._opts.context).find('.sau-filepath').val(response.fileUrl);
         }
     });
