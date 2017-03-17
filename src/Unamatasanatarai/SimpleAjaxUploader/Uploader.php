@@ -1,4 +1,5 @@
 <?php
+namespace Unamatasanatarai\SimpleAjaxUploader;
 
 /**
 * Simple Ajax Uploader

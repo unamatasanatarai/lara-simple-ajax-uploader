@@ -10,11 +10,13 @@
             "name": "Unamata Sanatarai",
             "email": "unamatasanatarai@gmail.com",
             "homepage": "https://github.com/unamatasanatarai/",
-            "role": "Main Forker"
+            "role": "Main Forker and Decorator"
         }
     ],
     "autoload": {
-        "files": ["extras/Uploader.php"]
+        "psr-4":{
+            "Unamatasanatarai\\SimpleAjaxUploader\\" : "src/Unamatasanatarai/SimpleAjaxUploader/"
+        }
     },
     "minimum-stability": "dev"
 }
