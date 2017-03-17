@@ -1,6 +1,7 @@
 ```
 @include('sau::inline', ['allow' => 'mp3, jpg, png, svg ', 'url' => route('assets.upload.file'), 'buttonCaption' => __('Wybierz plik'), 'name' => 'ufile_xls', 'value' => '', 'label' => 'Plik XLS', 'displayName' => __('Upuść tu plik, lub kliknij')])
 @include('sau::image', ['url' => route('assets.upload.image'), 'name' => 'main_image', 'value' => '', 'label' => 'Główny obrazek', 'displayName' => __('Upuść tu plik, lub kliknij')])
+@include('sau::images', ['url' => route('assets.upload.image'), 'name' => 'main_image2', 'value' => '', 'label' => 'Główny obrazek', 'displayName' => __('Upuść tu plik, lub kliknij')])
 ```
                             
                             
