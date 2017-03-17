@@ -2,7 +2,7 @@
 /// InlineFileUploader `[INPUT][BTN]`
 ///
 $('.sau-upload-inline').each(function(){
-    var progress = $(this).find('.sau-progress');
+    var progress = $(this).find('.sau-progress .determinate');
 
     var uploader = new ss.SimpleUpload({
         context:$(this),
@@ -13,7 +13,7 @@ $('.sau-upload-inline').each(function(){
         responseType: 'json',
         startXHR: function(filename, size) {
             $(this._opts.context).find('.sau-progress').addClass('open');
-            this.setProgressBar(progress.find('.determinate'));
+            this.setProgressBar(progress);
         },
         endXHR: function(filename) {
             $(this._opts.context).find('.sau-progress').removeClass('open');
