@@ -4,11 +4,15 @@
 $('.sau-upload-image').each(function () {
     var progress = $(this).find('.sau-progress>div');
 
+    var extensions = !$(this).data('allow') || $(this).data('allow').trim() == ''
+        ? ['jpg', 'jpeg', 'png', 'gif']
+        : $(this).data('allow').split(',').map(function (ext) {return $.trim(ext)});
+
     var uploader = new ss.SimpleUpload({
         context: $(this),
         dropzone: $(this).find('.sau-dropzone').attr('id'),
         button: $(this).find('.sau-dropzone').attr('id'),
-        allowedExtensions: ['jpg', 'jpeg', 'png', 'gif'],
+        allowedExtensions: extensions,
         url: $(this).data('url'),
         name: 'uploadfile',
         responseType: 'json',

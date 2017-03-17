@@ -3,7 +3,9 @@
 ///
 $('.sau-upload-inline').each(function () {
     var progress = $(this).find('.sau-progress>div');
-    var extensions = $(this).data('allow').split(',').map(function(ext){return $.trim(ext)});
+    var extensions = !$(this).data('allow') || $(this).data('allow').trim() == ''
+        ? []
+        : $(this).data('allow').split(',').map(function (ext) {return $.trim(ext)});
 
     var uploader = new ss.SimpleUpload({
         context: $(this),
