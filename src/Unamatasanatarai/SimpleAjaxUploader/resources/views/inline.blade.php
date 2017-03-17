@@ -9,9 +9,9 @@
                 <button class="sau-button btn btn-primary" id="sau_button_{{ rand(1, 5000) . uniqid() }}">{{ $buttonCaption or 'Select file' }}</button>
             </span>
 
-            <div class="sau-progress progress">
-                <div class="determinate"></div>
-            </div>
+        </div>
+        <div class="sau-progress progress">
+            <div class="determinate"></div>
         </div>
     </div>
 
