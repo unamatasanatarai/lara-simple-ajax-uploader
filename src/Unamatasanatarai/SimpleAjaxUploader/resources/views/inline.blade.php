@@ -1,4 +1,4 @@
-<div class="form-group sau-upload sau-upload-inline" data-url="{{ $url or '' }}">
+<div class="form-group sau-upload sau-upload-inline" data-url="{{ $url or '' }}" data-allow="{{ $allow or '' }}">
     @if(!empty($label))
         <label>{{ $label }}</label>
     @endif

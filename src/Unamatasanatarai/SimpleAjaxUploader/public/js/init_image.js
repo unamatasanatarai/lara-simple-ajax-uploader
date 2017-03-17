@@ -8,6 +8,7 @@ $('.sau-upload-image').each(function () {
         context: $(this),
         dropzone: $(this).find('.sau-dropzone').attr('id'),
         button: $(this).find('.sau-dropzone').attr('id'),
+        allowedExtensions: ['jpg', 'jpeg', 'png', 'gif'],
         url: $(this).data('url'),
         name: 'uploadfile',
         responseType: 'json',
@@ -19,6 +20,10 @@ $('.sau-upload-image').each(function () {
             $(this._opts.context).find('.sau-progress').removeClass('open');
         },
         onComplete: function (filename, response) {
+            if (!response.success) {
+                console.log(response.error);
+                return;
+            }
             $(this._opts.context).find('.sau-image').html('<img src="' + response.fileFullUrl + '">');
             $(this._opts.context).find('.sau-filepath').val(response.fileUrl);
         }
