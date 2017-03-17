@@ -2,7 +2,7 @@
 /// InlineFileUploader `[INPUT][BTN]`
 ///
 $('.sau-upload-inline').each(function(){
-    var progress = $(this).find('.sau-progress .determinate');
+    var progress = $(this).find('.sau-progress>div');
 
     var uploader = new ss.SimpleUpload({
         context:$(this),
