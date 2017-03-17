@@ -24,7 +24,6 @@
         ])
     </div>
 
-    <input type="hidden" name="{{ $name }}" value="{{ $value or '' }}" class="sau-filepath">
     <template id="sau_image">
         @include('sau::images_item', [
             'name' => 'gallery',
@@ -34,21 +33,6 @@
     </template>
 </div>
 
-
-
-        <div class="gallery row">
-            @if(!empty($formData))
-                @foreach($formData->gallery as $image)
-                    @include('elements.form.images_item', [
-                        'name' => 'gallery',
-                        'src'  => $image->src,
-                        'url'  => cdnAsset($image->src),
-                    ])
-                @endforeach
-            @endif
-        </div>
-    </div>
-</div>
 <script>
     var MULTI_E_SIZE = "{{ __('Nie wyszystkie obrazki zostały wgrane') }}";
     var MULTI_M_COMPLETE = "{{ __('Zakończyłem wgrywanie obrazków. Pamiętaj by zapisać zmiany!') }}";
