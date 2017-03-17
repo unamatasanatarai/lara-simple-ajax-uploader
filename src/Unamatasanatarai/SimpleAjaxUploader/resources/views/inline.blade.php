@@ -15,5 +15,6 @@
         </div>
     </div>
 
-    <input type="hidden" name="{{ $name }}" value="{{ $value or '' }}" class="sau-filepath">
+    <input type="hidden" name="{{ $name }}[src]" value="{{ $value or '' }}" class="sau-filepath">
+    <input type="hidden" name="{{ $name }}[name]" value="{{ $displayName or '' }}" class="sau-filename">
 </div>

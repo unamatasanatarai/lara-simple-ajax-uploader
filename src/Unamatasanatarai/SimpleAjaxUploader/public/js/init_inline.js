@@ -20,6 +20,7 @@ $('.sau-upload-inline').each(function(){
         },
         onComplete: function(filename, response) {
             $(this._opts.context).find('.sau-displayname').val(response.fileName);
+            $(this._opts.context).find('.sau-filename').val(response.fileName);
             $(this._opts.context).find('.sau-filepath').val(response.fileUrl);
         }
     });
