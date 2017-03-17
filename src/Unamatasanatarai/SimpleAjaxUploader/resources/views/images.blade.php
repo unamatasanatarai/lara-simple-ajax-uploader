@@ -3,7 +3,7 @@
         <label>{{ $label }}</label>
     @endif
     <div class="sau-dropzone sau-inputs" id="sau_dropzone_{{ rand(1, 5000) . uniqid() }}">
-        <span class="btn btn-primary">Wybierz plik</span>
+        <span class="btn btn-primary">{{ __('Wybierz plik') }}</span>
         <div class="sau-image">
             @if(!empty($value))
                 <img src="{{ $value }}">
@@ -17,18 +17,20 @@
         </div>
     </div>
     <div class="sau-gallery clearfix">
-        @foreach($gallery as $item)
-            @include('sau::images_item', [
-                'name' => $name,
-                'src'  => $item->src,
-                'url'  => $item->url,
-            ])
-        @endforeach
+        @if(!empty($gallery))
+            @foreach($gallery as $item)
+                @include('sau::images_item', [
+                    'name' => $name,
+                    'src'  => $item->src,
+                    'url'  => $item->url,
+                ])
+            @endforeach
+        @endif
     </div>
 
     <template id="sau_image">
         @include('sau::images_item', [
-            'name' => 'gallery',
+            'name' => $name,
             'src'  => '',
             'url'  => '',
         ])
