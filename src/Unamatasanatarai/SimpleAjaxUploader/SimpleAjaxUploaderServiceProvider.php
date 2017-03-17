@@ -3,7 +3,7 @@ namespace Unamatasanatarai\SimpleAjaxUploader;
 
 use Illuminate\Support\ServiceProvider;
 
-class DropboxHashServiceProvider extends ServiceProvider
+class SimpleAjaxUploaderServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
