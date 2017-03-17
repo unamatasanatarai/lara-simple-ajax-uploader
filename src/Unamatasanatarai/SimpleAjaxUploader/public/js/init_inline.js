@@ -13,7 +13,7 @@ $('.sau-upload-inline').each(function(){
         responseType: 'json',
         startXHR: function(filename, size) {
             $(this._opts.context).find('.sau-progress').addClass('open');
-            this.setProgressBar(progress);
+            this.setProgressBar(progress.find('.determinate'));
         },
         endXHR: function(filename) {
             $(this._opts.context).find('.sau-progress').removeClass('open');
