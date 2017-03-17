@@ -4,7 +4,7 @@ $url = $attributes['url'] ?? '';
 
 $attributes['type'] = 'hidden';
 $attributes['class'] = 'filepath';
-$attributes['id'] = 'dragbox' . rand(1, 5000) . uniqid();
+
 
 unset($attributes['url']);
 unset($attributes['label']);
@@ -12,11 +12,14 @@ unset($attributes['label']);
 ?>
 <div class="form-group sau-upload sau-upload-inline" data-url="{{ $url }}">
     @if(!empty($label))
-        <label for="{{ $attributes['id'] }}">{{ $label }}</label>
+        <label for="{{ $id }}">{{ $label }}</label>
     @endif
-    <div class="sau-inputs">
-        <input type="text" value="{{ $attributes['displayName'] or '' }}">
-        <button class="sau-button">{{ $buttonCaption or 'Select file' }}</button>
+    <div class="sau-dropzone sau-inputs" id="sau_dropzone_{{ rand(1, 5000) . uniqid() }}">
+        <div class="input-group">
+            <input type="text" value="{{ $attributes['displayName'] or '' }}" class="sau-displayname form-control" readonly>
+            <span class="input-group-btn">
+                <button class="sau-button" id="sau_button_{{ rand(1, 5000) . uniqid() }}">{{ $buttonCaption or 'Select file' }}</button>
+            </span>
 
         <div class="sau-progress progress">
             <div class="determinate"></div>
