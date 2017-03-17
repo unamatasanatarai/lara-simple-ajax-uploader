@@ -17,11 +17,13 @@
         </div>
     </div>
     <div class="sau-gallery clearfix">
-        @include('sau::images_item', [
-            'name' => 'gallery',
-            'src'  => 'one.png',
-            'url'  => 'https://placekitten.com/g/1000/600',
-        ])
+        @foreach($gallery as $item)
+            @include('sau::images_item', [
+                'name' => $name,
+                'src'  => $item->src,
+                'url'  => $item->url,
+            ])
+        @endforeach
     </div>
 
     <template id="sau_image">

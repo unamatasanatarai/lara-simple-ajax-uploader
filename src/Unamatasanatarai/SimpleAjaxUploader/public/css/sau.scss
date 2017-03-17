@@ -1,5 +1,19 @@
 .sau-upload {
   position: relative;
+  user-select: none;
+  .listendelete {
+    display: block;
+    z-index: 9999;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: darkred;
+    color: white;
+    width: 24px;
+    height: 24px;
+  }
+
   .sau-progress {
     position: relative;
     height: 1px;
@@ -42,6 +56,7 @@
 
   .sau-image {
     background: #efefef;
+    user-select: none;
 
     img {
       max-width: 100%;
@@ -49,18 +64,26 @@
   }
 
   &.sau-upload-images {
-    .sau-dropzone, svg {
+    .sau-dropzone {
+      overflow: hidden;
+    }
+
+    .sau-dropzone, .sau-calltoaction svg {
       height: 100px;
     }
+
     .sau-gallery {
+      border: 1px solid #efefef;
+
       .sau-item {
+        border: 1px solid #efefef;
+        margin: 5px;
         position: relative;
         width: 200px;
         height: 200px;
         overflow: hidden;
         text-align: center;
         float: left;
-        margin-right: 10px;
 
         img {
           max-width: 100%;
@@ -71,7 +94,7 @@
           transform: translate(-50%, -50%);
         }
         .loading {
-          display:none;
+          display: none;
           width: 24px;
           height: 24px;
           position: absolute;
