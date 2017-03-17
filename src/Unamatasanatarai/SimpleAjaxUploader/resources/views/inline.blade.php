@@ -6,7 +6,7 @@
         <div class="input-group">
             <input type="text" value="{{ $displayName or '' }}" class="sau-displayname form-control" readonly>
             <span class="input-group-btn">
-                <button class="sau-button" id="sau_button_{{ rand(1, 5000) . uniqid() }}">{{ $buttonCaption or 'Select file' }}</button>
+                <button class="sau-button btn btn-primary" id="sau_button_{{ rand(1, 5000) . uniqid() }}">{{ $buttonCaption or 'Select file' }}</button>
             </span>
 
             <div class="sau-progress progress">
