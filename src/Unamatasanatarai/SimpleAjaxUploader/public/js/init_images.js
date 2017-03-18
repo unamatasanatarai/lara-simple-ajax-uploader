@@ -17,6 +17,7 @@ $('.sau-upload-images').each(function () {
         allowedExtensions: ['jpg', 'jpeg', 'png', 'gif'],
         name: 'uploadfile',
         multiple: true,
+        multipleSelect: true,
         queue: true,
         maxUploads: 1,
         responseType: 'json',
