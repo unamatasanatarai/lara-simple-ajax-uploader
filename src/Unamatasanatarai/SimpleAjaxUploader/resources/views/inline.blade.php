@@ -4,7 +4,7 @@
     @endif
     <div class="sau-dropzone sau-inputs" id="sau_dropzone_{{ rand(1, 5000) . uniqid() }}">
         <div class="input-group">
-            <input type="text" value="{{ $displayName or '' }}" class="sau-displayname form-control" readonly>
+            <input type="text" value="{{ $placeholder or 'Drop files here, or click' }}" class="sau-displayname form-control" readonly>
             <span class="input-group-btn">
                 <button class="sau-button btn btn-primary"
                         id="sau_button_{{ rand(1, 5000) . uniqid() }}">{{ $buttonCaption or 'Select file' }}</button>
