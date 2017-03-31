@@ -45,3 +45,5 @@ example controller (@TODO: rethink implementation)
                'fileUrl'     => $newFilename,
            ]);
        }```
+
+https://packagist.org/packages/unamatasanatarai/lara-simple-ajax-uploader
