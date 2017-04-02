@@ -4,6 +4,7 @@
 $(document).on('click', '.sau-upload-image .listendelete', function(e){
     e.preventDefault();
     const o = $(this).parents('.sau-upload-image');
+    $(this).addClass('hide');
     o.find('.sau-calltoaction').removeClass('hide');
     o.find('.img').html('');
     o.find('.sau-filepath').val('');
@@ -38,7 +39,7 @@ $('.sau-upload-image').each(function () {
             $(this._opts.context).find('.sau-image .img').html('<img src="' + response.fileFullUrl + '">');
             $(this._opts.context).find('.sau-filepath').val(response.fileUrl);
             $(this._opts.context).find('.sau-calltoaction').addClass('hide');
-
+            $(this._opts.context).find('.listendelete').removeClass('hide');
         }
     });
 });

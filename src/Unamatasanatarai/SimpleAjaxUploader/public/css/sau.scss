@@ -1,9 +1,6 @@
 .sau-upload {
   position: relative;
   user-select: none;
-  .hide{
-    display:none;
-  }
   .listendelete {
     display: block;
     z-index: 9999;
@@ -15,6 +12,9 @@
     color: white;
     width: 24px;
     height: 24px;
+  }
+  .hide {
+    display: none;
   }
 
   .sau-progress {
@@ -117,5 +117,17 @@
   }
   .sau-button {
     height: 100%;
+  }
+
+  &.sau-upload-inline {
+    .listendelete {
+      right: initial;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    input {
+      padding-left: 40px;
+    }
   }
 }
