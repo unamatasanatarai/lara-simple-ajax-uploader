@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Simple Ajax Uploader for Laravel. Multifile, inline and singlefile",
     "homepage": "https://github.com/unamatasanatarai/lara-simple-ajax-uploader",
-    "keywords": ['ajax upload', 'laravel multi upload'],
+    "keywords": ["ajax upload", "laravel multi upload"],
     "license": "MIT",
     "authors": [
         {
