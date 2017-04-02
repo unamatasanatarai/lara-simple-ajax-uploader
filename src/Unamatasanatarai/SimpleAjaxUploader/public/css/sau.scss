@@ -1,6 +1,9 @@
 .sau-upload {
   position: relative;
   user-select: none;
+  .hide{
+    display:none;
+  }
   .listendelete {
     display: block;
     z-index: 9999;
@@ -112,7 +115,7 @@
       }
     }
   }
-  .sau-button{
-    height:100%;
+  .sau-button {
+    height: 100%;
   }
 }

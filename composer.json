@@ -1,9 +1,9 @@
 {
     "name": "unamatasanatarai/lara-simple-ajax-uploader",
     "type": "library",
-    "description": "As a composer package",
+    "description": "Simple Ajax Uploader for Laravel. Multifile, inline and singlefile",
     "homepage": "https://github.com/unamatasanatarai/lara-simple-ajax-uploader",
-    "keywords": [],
+    "keywords": ['ajax upload', 'laravel multi upload'],
     "license": "MIT",
     "authors": [
         {
@@ -17,6 +17,5 @@
         "psr-4":{
             "Unamatasanatarai\\SimpleAjaxUploader\\" : "src/Unamatasanatarai/SimpleAjaxUploader/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
