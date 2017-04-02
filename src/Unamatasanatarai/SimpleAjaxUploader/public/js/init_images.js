@@ -37,7 +37,6 @@ $('.sau-upload-images').each(function () {
         },
         onError: function (filename, errorType, status, statusText, response, uploadBtn, fileSize) {
             $(this._opts.context).parent().find('.sau-gallery .progress[data-name="' + filename + '"]').remove();
-            console.log(MULTI_E_SIZE, 'error');
         },
         onComplete: function (filename, response) {
             var gallery = $(this._opts.context).parent().find('.sau-gallery');
@@ -45,14 +44,7 @@ $('.sau-upload-images').each(function () {
             item.removeClass('progress').removeAttr('data-name');
             item.find('img').removeClass("hide").attr('src', response.fileFullUrl);
             item.find('.sau-filepath').val(response.fileUrl);
-
-            if (!this.getQueueSize()) {
-                console.log(MULTI_M_COMPLETE, 'success');
-                // gallery.sortable({
-                //     placeholder: "ui-state-highlight"
-                // });
-                // gallery.disableSelection();
-            }
+            $(item).trigger('sau-complete');
         }
     });
 });

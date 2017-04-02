@@ -33,13 +33,15 @@ $('.sau-upload-image').each(function () {
         },
         onComplete: function (filename, response) {
             if (!response.success) {
-                console.log(response.error);
+                // console.log(response.error);
                 return;
             }
-            $(this._opts.context).find('.sau-image .img').html('<img src="' + response.fileFullUrl + '">');
-            $(this._opts.context).find('.sau-filepath').val(response.fileUrl);
-            $(this._opts.context).find('.sau-calltoaction').addClass('hide');
-            $(this._opts.context).find('.listendelete').removeClass('hide');
+            var item = $(this._opts.context);
+            item.find('.sau-image .img').html('<img src="' + response.fileFullUrl + '">');
+            item.find('.sau-filepath').val(response.fileUrl);
+            item.find('.sau-calltoaction').addClass('hide');
+            item.find('.listendelete').removeClass('hide');
+            item.trigger('sau-complete');
         }
     });
 });

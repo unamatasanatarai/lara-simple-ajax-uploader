@@ -29,10 +29,12 @@ $('.sau-upload-inline').each(function () {
             $(this._opts.context).find('.sau-progress').removeClass('open');
         },
         onComplete: function (filename, response) {
-            $(this._opts.context).find('.sau-displayname').val(response.fileName);
-            $(this._opts.context).find('.sau-filename').val(response.fileName);
-            $(this._opts.context).find('.sau-filepath').val(response.fileUrl);
-            $(this._opts.context).find('.listendelete').removeClass('hide');
+            var item = $(this._opts.context);
+            item.find('.sau-displayname').val(response.fileName);
+            item.find('.sau-filename').val(response.fileName);
+            item.find('.sau-filepath').val(response.fileUrl);
+            item.find('.listendelete').removeClass('hide');
+            item.trigger('sau-complete');
         }
     });
 });
